@@ -1,15 +1,18 @@
+package com.danbro.springcloud;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @Classname PaymentMain8081
+ * @Classname Payment8081Main
  * @Description TODO
- * @Date 2020/5/7 14:02
+ * @Date 2020/5/7 14:29
  * @Author Danrbo
  */
 @SpringBootApplication
-public class PaymentMain8081 {
+public class Payment8081Main {
+
     public static void main(String[] args) {
-        SpringApplication.run(PaymentMain8081.class);
+        SpringApplication.run(Payment8081Main.class);
     }
 }
