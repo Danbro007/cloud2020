@@ -16,25 +16,28 @@
     <!--统一管理jar包版本-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>12</maven.compiler.source>
+        <maven.compiler.target>12</maven.compiler.target>
         <junit.version>4.12</junit.version>
-        <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.18.10</lombok.version>
-        <mysql.version>8.0.18</mysql.version>
+        <log4j.version>1.2.17</log4j.version>
+        <mysql.version>5.1.48</mysql.version>
         <druid.version>1.1.16</druid.version>
-        <druid.spring.boot.starter.version>1.1.10</druid.spring.boot.starter.version>
-        <spring.boot.version>2.2.2.RELEASE</spring.boot.version>
-        <spring.cloud.version>Hoxton.SR1</spring.cloud.version>
-        <spring.cloud.alibaba.version>2.1.0.RELEASE</spring.cloud.alibaba.version>
-        <mybatis.spring.boot.version>1.3.0</mybatis.spring.boot.version>
-        <mybatis-spring-boot-starter.version>2.1.1</mybatis-spring-boot-starter.version>
-        <hutool-all.version>5.1.0</hutool-all.version>
+        <druid-srpintboot.version>1.1.10</druid-srpintboot.version>
+        <mybatis.spring.boot.version>2.1.1</mybatis.spring.boot.version>
+        <mybatis-plus-sprint-starter.version>3.3.0</mybatis-plus-sprint-starter.version>
+        <flyway.version>5.2.4</flyway.version>
+        <druid-spring-starter.version>1.1.10</druid-spring-starter.version>
     </properties>
 
     <!-- 子模块继承之后，提供作用：锁定版本 + 子module不用谢groupId和version -->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.0.0</version>
+            </dependency>
             <!--spring boot 2.2.2-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -51,41 +54,60 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--Spring cloud alibaba 2.1.0.RELEASE-->
             <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>2.1.0.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.spring.boot.version}</version>
             </dependency>
+            <!--junit-->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <!--log4j-->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <!--mysql-->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
+                <scope>runtime</scope>
             </dependency>
+            <!-- druid-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${druid.spring.boot.starter.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis-spring-boot-starter.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-core</artifactId>
+                <version>${flyway.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-srpintboot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-sprint-starter.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+
     <name>Maven</name>
     <!-- FIXME change it to the project's website -->
     <url>http://maven.apache.org/</url>
@@ -122,6 +144,23 @@
                 <configuration>
                     <locales>en,fr</locales>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>6.2.3</version>
+                <configuration>
+                    <url>jdbc:mysql://localhost:3306/db2019?relaxAutoCommit=true</url>
+                    <user>root</user>
+                    <password>123456</password>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>${mysql.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
