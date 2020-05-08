@@ -4,3 +4,4 @@
 
 [MyBatis-Plus官方文档](https://mp.baomidou.com/guide/optimistic-locker-plugin.html)
 
+[Nacos官方文档](http://dubbo.apache.org/zh-cn/docs/user/references/registry/nacos.html)
