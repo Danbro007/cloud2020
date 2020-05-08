@@ -28,7 +28,7 @@ public class PaymentServiceImpl implements PaymentService {
 
         int result = paymentMapper.insert(payment);
         if (result == 1) {
-            return new CommonResult<>(CodeEnum.Success, payment);
+            return new CommonResult<>(CodeEnum.SUCCESS, payment);
         }
         return new CommonResult(CodeEnum.NOT_FOUND);
     }
@@ -38,7 +38,7 @@ public class PaymentServiceImpl implements PaymentService {
         Payment payment = paymentMapper.selectById(id);
         boolean flag = Optional.ofNullable(payment).isPresent();
         if(flag){
-            return new CommonResult<>(CodeEnum.Success, payment);
+            return new CommonResult<>(CodeEnum.SUCCESS, payment);
         }
         return new CommonResult(CodeEnum.NOT_FOUND);
     }

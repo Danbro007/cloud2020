@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * @Classname Payment
- * @Description TODO
+ * @Description TODO 支付实体类
  * @Date 2020/5/7 15:26
  * @Author Danrbo
  */

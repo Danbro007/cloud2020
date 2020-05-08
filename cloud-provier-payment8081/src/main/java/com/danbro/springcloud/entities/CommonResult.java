@@ -1,12 +1,10 @@
 package com.danbro.springcloud.entities;
 
 import com.danbro.springcloud.enumeration.CodeEnum;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.function.Consumer;
 
 /**
  * @Classname CommonResult

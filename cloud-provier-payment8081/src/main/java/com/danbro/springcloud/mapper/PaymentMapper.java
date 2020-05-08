@@ -5,7 +5,7 @@ import com.danbro.springcloud.entities.Payment;
 
 /**
  * @Classname PaymentMapper
- * @Description TODO
+ * @Description TODO 支付Mapper
  * @Date 2020/5/7 15:41
  * @Author Danrbo
  */

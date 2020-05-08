@@ -12,9 +12,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @MapperScan(basePackages = "com.danbro.springcloud.mapper")
-public class Payment8081Main {
+public class PaymentMain8081 {
 
     public static void main(String[] args) {
-        SpringApplication.run(Payment8081Main.class,args);
+        SpringApplication.run(PaymentMain8081.class,args);
     }
 }
