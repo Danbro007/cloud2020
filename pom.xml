@@ -11,6 +11,9 @@
         <module>cloud-provier-payment8081</module>
         <module>cloud-consumer-order80</module>
         <module>cloud-commons-api</module>
+        <module>cloud-eureka-server7001</module>
+        <module>cloud-provider-payment8082</module>
+        <module>cloud-consumerzk-order80</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -31,6 +34,7 @@
         <flyway.version>5.2.4</flyway.version>
         <druid-spring-starter.version>1.1.10</druid-spring-starter.version>
         <hutool.version>5.1.0</hutool.version>
+        <cloud-commons-api.version>1.0-SNAPSHOT</cloud-commons-api.version>
     </properties>
 
     <!-- 子模块继承之后，提供作用：锁定版本 + 子module不用谢groupId和version -->

@@ -3,6 +3,7 @@ package com.danbro.springcloud;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @Classname Payment8081Main
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Author Danrbo
  */
 @SpringBootApplication
+@EnableEurekaClient
 @MapperScan(basePackages = "com.danbro.springcloud.mapper")
 public class PaymentMain8081 {
 

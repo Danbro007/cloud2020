@@ -6,16 +6,17 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @Classname ApplicationContext
+ * @Classname ApplicationContextConfig
  * @Description TODO
- * @Date 2020/5/8 9:55
+ * @Date 2020/5/9 10:15
  * @Author Danrbo
  */
 @Configuration
 public class ApplicationContextConfig {
+
     @Bean
     @LoadBalanced
-    public RestTemplate getRestTemplate() {
+    public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
 }

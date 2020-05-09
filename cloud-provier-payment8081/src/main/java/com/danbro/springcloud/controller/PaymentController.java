@@ -4,6 +4,7 @@ import com.danbro.springcloud.entities.CommonResult;
 import com.danbro.springcloud.entities.Payment;
 import com.danbro.springcloud.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -18,6 +19,9 @@ public class PaymentController {
     @Autowired
     PaymentService paymentService;
 
+    @Value("${server.port}")
+    private int port;
+
     /**
      * 通过支付Id查询支付信息
      * @param id 支付消息的Id
@@ -25,6 +29,7 @@ public class PaymentController {
      */
     @GetMapping("/payment/{id}")
     public CommonResult getPayment(@PathVariable("id") Long id) {
+        System.out.println("from port:" + port);
         return paymentService.getPaymentById(id);
     }
 
@@ -34,7 +39,7 @@ public class PaymentController {
      * @return 消息
      */
     @PostMapping(value = "/payment")
-    public CommonResult insertPayment(@RequestBody Payment payment) {
+    public CommonResult insertPayment(@RequestBody  Payment payment) {
         return paymentService.insertPayment(payment);
     }
 
