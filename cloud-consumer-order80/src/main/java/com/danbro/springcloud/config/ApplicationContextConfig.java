@@ -1,6 +1,5 @@
 package com.danbro.springcloud.config;
 
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -14,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class ApplicationContextConfig {
     @Bean
-    @LoadBalanced
+//    @LoadBalanced //使用自己写的的ribbon负载均衡算法要注释掉该注解
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }

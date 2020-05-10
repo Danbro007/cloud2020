@@ -1,9 +1,11 @@
 package com.danbro.springcloud;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+        import com.danbro.ribbonrule.MyRibbonRule;
+        import org.springframework.boot.SpringApplication;
+        import org.springframework.boot.autoconfigure.SpringBootApplication;
+        import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+        import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+        import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
 
 /**
@@ -12,6 +14,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @Date 2020/5/8 9:48
  * @Author Danrbo
  */
+@RibbonClient(name = "CLOUD-PAYMENT-SERVICE",configuration = MyRibbonRule.class)
 @EnableEurekaClient
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
 public class OrderMain80 {

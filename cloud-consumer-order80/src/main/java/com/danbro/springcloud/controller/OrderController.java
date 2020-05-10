@@ -2,6 +2,7 @@ package com.danbro.springcloud.controller;
 
 import com.danbro.springcloud.entities.CommonResult;
 import com.danbro.springcloud.entities.Payment;
+import com.danbro.springcloud.myloadbalancer.LoadBalancer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -25,6 +26,9 @@ public class OrderController {
 
     @Autowired
     private DiscoveryClient discoveryClient;
+
+    @Autowired
+    private LoadBalancer loadBalancer;
 
     private static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE/";
 
@@ -51,5 +55,16 @@ public class OrderController {
         instances.forEach(i -> instanceHashMap.put(i.getInstanceId(), i.getHost() + ":" + i.getPort()));
         map.put("instances", instanceHashMap);
         return map;
+    }
+
+    @GetMapping(value = "/consumer/payment/lb")
+    public String getPaymentLb() {
+        //discoveryClient通过服务名找到服务下面所有的服务实例
+        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
+        ServiceInstance instance = loadBalancer.getServiceInstance(instances);
+        if (instance != null){
+            return instance.getHost() + ":" + instance.getPort();
+        }
+        return "failure";
     }
 }
