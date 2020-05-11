@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @Classname PaymentController
  * @Description TODO 支付controller
@@ -43,4 +45,13 @@ public class PaymentController {
         return paymentService.insertPayment(payment);
     }
 
+    @GetMapping(value = "/payment/timeout")
+    public String paymentTimeout(){
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return String.valueOf(port);
+    }
 }
