@@ -17,6 +17,8 @@
         <module>cloud-provicer-consul-payment8083</module>
         <module>cloud-consumer-consul-order80</module>
         <module>cloud-consumer-feign-order80</module>
+        <module>cloud-provider-hystrix-payment8001</module>
+        <module>cloud-consumer-feign-hystrix-order80</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -164,7 +166,7 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>${flyway.version}</version>
                 <configuration>
-                    <url>jdbc:mysql://192.168.0.12:3306/db2019?relaxAutoCommit=true</url>
+                    <url>jdbc:mysql://localhost:3306/db2019?relaxAutoCommit=true</url>
                     <user>root</user>
                     <password>123456</password>
                 </configuration>

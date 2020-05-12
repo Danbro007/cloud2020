@@ -12,3 +12,4 @@ eureka:
 logging:
   level:
     com.danbro.springcloud.service.PaymentFeignService: debug
+
