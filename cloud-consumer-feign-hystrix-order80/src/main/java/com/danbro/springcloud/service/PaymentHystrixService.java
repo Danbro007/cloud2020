@@ -22,5 +22,4 @@ public interface PaymentHystrixService {
     @GetMapping("/payment/hystrix/timeout/{id}")
     String paymentTimeout(@PathVariable("id") Integer id);
 
-
 }
