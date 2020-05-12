@@ -9,3 +9,5 @@
 [Consul官方文档](https://www.springcloud.cc/spring-cloud-consul.html)
 
 [Hutool官方文档](https://www.hutool.cn/docs/#/)
+
+[Spring Cloud Gateway 官方文档](https://cloud.spring.io/spring-cloud-gateway/reference/html/#gateway-starter)
