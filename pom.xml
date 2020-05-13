@@ -12,16 +12,16 @@
         <module>cloud-consumer-order80</module>
         <module>cloud-commons-api</module>
         <module>cloud-eureka-server7001</module>
-        <module>cloud-provier-payment8081</module>
-        <module>cloud-consumerzk-order80</module>
-        <module>cloud-provicer-consul-payment8083</module>
+        <module>cloud-provider-payment</module>
+        <module>cloud-consumer-zookeeper-order80</module>
+        <module>cloud-provider-consul-payment8083</module>
         <module>cloud-consumer-consul-order80</module>
         <module>cloud-consumer-feign-order80</module>
         <module>cloud-provider-hystrix-payment8001</module>
         <module>cloud-consumer-feign-hystrix-order80</module>
         <module>cloud-consumer-hystrix-dashboard9001</module>
         <module>cloud-gateway-gateway9527</module>
-        <module>cloud-config-conter3344</module>
+        <module>cloud-config-center3344</module>
         <module>cloud-config-client</module>
     </modules>
     <packaging>pom</packaging>
