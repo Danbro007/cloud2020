@@ -19,3 +19,4 @@
 
 [Spring Cloud Consul 官方文档](https://cloud.spring.io/spring-cloud-static/spring-cloud-consul/2.2.2.RELEASE/reference/html/)
 
+[Spring Cloud Config 官方文档](https://cloud.spring.io/spring-cloud-static/spring-cloud-config/2.2.2.RELEASE/reference/html/#_client_side_usage)\
