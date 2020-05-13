@@ -18,3 +18,4 @@ public class GatewayMain9527 {
         SpringApplication.run(GatewayMain9527.class,args);
     }
 }
+
