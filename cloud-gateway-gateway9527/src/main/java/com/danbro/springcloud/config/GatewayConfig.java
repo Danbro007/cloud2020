@@ -15,8 +15,15 @@ import org.springframework.context.annotation.Configuration;
 public class GatewayConfig {
     @Bean
     public RouteLocator routes(RouteLocatorBuilder builder) {
-        return builder.routes().route("path_route_test", r -> r.path("/guoji")
+        return builder.routes().route("path_route_guoji", r -> r.path("/guoji")
                 .uri("http://news.baidu.com/guoji"))
+                .build();
+    }
+
+    @Bean
+    public RouteLocator routes2(RouteLocatorBuilder builder) {
+        return builder.routes().route("path_route-guonei", r -> r.path("/guonei")
+                .uri("http://news.baidu.com/guonei"))
                 .build();
     }
 }
