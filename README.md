@@ -1,7 +1,7 @@
 # cloud2020
 # 技术文档
 
-[flyway 官方文档](:https://flywaydb.org/getstarted/firststeps/maven)
+
 
 [MyBatis-Plus 官方文档](https://mp.baomidou.com/guide/optimistic-locker-plugin.html)
 
@@ -20,3 +20,7 @@
 [Spring Cloud Consul 官方文档](https://cloud.spring.io/spring-cloud-static/spring-cloud-consul/2.2.2.RELEASE/reference/html/)
 
 [Spring Cloud Config 官方文档](https://cloud.spring.io/spring-cloud-static/spring-cloud-config/2.2.2.RELEASE/reference/html/#_client_side_usage)\
+
+[Spring Cloud Bus 官方文档](https://cloud.spring.io/spring-cloud-static/spring-cloud-bus/2.2.1.RELEASE/reference/html/)
+
+[flyway 官方文档](:https://flywaydb.org/getstarted/firststeps/maven)

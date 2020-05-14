@@ -1,0 +1,8 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: cloud-provider-payment
+  cloud:
+    zookeeper:
+      connect-string: 192.168.43.109:2181 # zookeeper客户端访问端口
