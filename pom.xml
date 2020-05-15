@@ -23,6 +23,8 @@
         <module>cloud-gateway-gateway9527</module>
         <module>cloud-config-center3344</module>
         <module>cloud-config-client</module>
+        <module>cloud-provider-rabbitmq8801</module>
+        <module>cloud-consumer-rabbitmq</module>
     </modules>
     <packaging>pom</packaging>
 
