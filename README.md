@@ -24,3 +24,7 @@
 [Spring Cloud Bus 官方文档](https://cloud.spring.io/spring-cloud-static/spring-cloud-bus/2.2.1.RELEASE/reference/html/)
 
 [flyway 官方文档](:https://flywaydb.org/getstarted/firststeps/maven)
+
+[Nacos 中文官方文档](https://nacos.io/zh-cn/index.html)
+
+[Spring Cloud Alibaba 中文文档](https://github.com/alibaba/spring-cloud-alibaba/blob/master/README-zh.md)
