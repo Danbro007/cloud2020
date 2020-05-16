@@ -1,0 +1,4 @@
+com\danbro\springcloud\service\impl\RabbitMessageProviderImpl.class
+com\danbro\springcloud\service\MessageProvider.class
+com\danbro\springcloud\controller\RabbitMqController.class
+com\danbro\springcloud\RabbitMqProviderMain8801.class

@@ -1,0 +1,2 @@
+com\danbro\springcloud\RabbitMqConsumerMain.class
+com\danbro\springcloud\service\ReceiveMessageListener.class

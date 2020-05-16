@@ -1,0 +1,6 @@
+com\danbro\ribbonrule\MyRibbonRule.class
+com\danbro\springcloud\myloadbalancer\LoadBalancer.class
+com\danbro\springcloud\myloadbalancer\MyLB.class
+com\danbro\springcloud\OrderMain80.class
+com\danbro\springcloud\controller\OrderController.class
+com\danbro\springcloud\config\ApplicationContextConfig.class

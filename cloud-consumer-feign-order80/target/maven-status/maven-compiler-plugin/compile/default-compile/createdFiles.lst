@@ -1,0 +1,4 @@
+com\danbro\springcloud\service\PaymentFeignService.class
+com\danbro\springcloud\config\FeignConfig.class
+com\danbro\springcloud\OrderFeignMain80.class
+com\danbro\springcloud\controller\OrderFeignController.class

@@ -11,5 +11,28 @@
 
     <artifactId>cloud-alibaba-provider-payment</artifactId>
 
+    <dependencies>
+        <!--actuator-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
 
+        <!--SpringMVC-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.danbro</groupId>
+            <artifactId>cloud-commons-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!--nacos-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-nacos-discovery</artifactId>
+        </dependency>
+    </dependencies>
 </project>

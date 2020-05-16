@@ -1,0 +1,21 @@
+server:
+  port: 90
+
+spring:
+  application:
+    name: consumer-order-nacos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+service-url:
+  nacos-user-service: http://payment-service-nacos # 要调用的服务名
+

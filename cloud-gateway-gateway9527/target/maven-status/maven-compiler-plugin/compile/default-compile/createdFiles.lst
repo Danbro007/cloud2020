@@ -1,0 +1,4 @@
+com\danbro\springcloud\Test.class
+com\danbro\springcloud\filter\MyLogGatewayFilter.class
+com\danbro\springcloud\GatewayMain9527.class
+com\danbro\springcloud\config\GatewayConfig.class
