@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/cloud-alibaba-config-nacos-client/cloud-alibaba-config-nacos-client.iml" filepath="$PROJECT_DIR$/cloud-alibaba-config-nacos-client/cloud-alibaba-config-nacos-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-alibaba-consumer-order80/cloud-alibaba-consumer-order80.iml" filepath="$PROJECT_DIR$/cloud-alibaba-consumer-order80/cloud-alibaba-consumer-order80.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-alibaba-provider-payment/cloud-alibaba-provider-payment.iml" filepath="$PROJECT_DIR$/cloud-alibaba-provider-payment/cloud-alibaba-provider-payment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-alibaba-sentinel-service/cloud-alibaba-sentinel-service.iml" filepath="$PROJECT_DIR$/cloud-alibaba-sentinel-service/cloud-alibaba-sentinel-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-commons-api/cloud-commons-api.iml" filepath="$PROJECT_DIR$/cloud-commons-api/cloud-commons-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-config-center3344/cloud-config-center3344.iml" filepath="$PROJECT_DIR$/cloud-config-center3344/cloud-config-center3344.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-config-client/cloud-config-client.iml" filepath="$PROJECT_DIR$/cloud-config-client/cloud-config-client.iml" />

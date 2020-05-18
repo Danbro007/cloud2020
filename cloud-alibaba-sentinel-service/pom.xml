@@ -11,6 +11,11 @@
 
     <artifactId>cloud-alibaba-sentinel-service</artifactId>
     <dependencies>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba</artifactId>
+        </dependency>
         <!-- Sentinel-nacos -->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
@@ -35,6 +40,12 @@
             <groupId>com.danbro</groupId>
             <artifactId>cloud-commons-api</artifactId>
             <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-spring-webmvc-adapter</artifactId>
+            <version>1.7.2</version>
         </dependency>
     </dependencies>
 </project>

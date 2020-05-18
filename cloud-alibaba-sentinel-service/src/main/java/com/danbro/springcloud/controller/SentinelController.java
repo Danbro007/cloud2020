@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SentinelController {
 
+
     @GetMapping("/testA")
     public String testA(){
         return "-----test A-----";
@@ -19,6 +20,7 @@ public class SentinelController {
 
     @GetMapping("/testB")
     public String testB(){
+        System.out.println(Thread.currentThread().getName());
         return "-----test B-----";
     }
 }

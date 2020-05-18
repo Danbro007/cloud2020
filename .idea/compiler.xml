@@ -7,32 +7,36 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-consumer-order80" />
+        <module name="cloud-alibaba-sentinel-service" />
         <module name="cloud-provider-hystrix-payment8001" />
         <module name="cloud-config-client" />
+        <module name="cloud-config-center3344" />
+        <module name="cloud-alibaba-config-nacos-client" />
         <module name="cloud-eureka-server7001" />
         <module name="cloud-consumerzk-order80" />
-        <module name="cloud-gateway-gateway9527" />
         <module name="cloud-consumer-consul-order80" />
+        <module name="cloud-alibaba-consumer-order80" />
         <module name="cloud-provicer-consul-payment8083" />
         <module name="cloud-consumer-rabbitmq" />
         <module name="cloud-provider-zookeeper-payment8082" />
         <module name="cloud-consumer-feign-hystrix-order80" />
-        <module name="cloud-provider-consul-payment8083" />
         <module name="cloud-commons-api" />
         <module name="cloud-alibaba-provider-payment" />
         <module name="cloud-provider-rabbitmq8801" />
         <module name="cloud-provider-payment8082" />
         <module name="cloud-provider-payment" />
-        <module name="cloud-alibaba-consumer-order80" />
-        <module name="cloud-config-center3344" />
+        <module name="cloud-provider-consul-payment8083" />
+        <module name="cloud-gateway-gateway9527" />
         <module name="cloud-consumer-hystrix-dashboard9001" />
         <module name="cloud-consumer-feign-order80" />
         <module name="cloud-provier-payment8081" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cloud-alibaba-config-nacos-client" target="1.8" />
       <module name="cloud-alibaba-consumer-order80" target="1.8" />
       <module name="cloud-alibaba-provider-payment" target="1.8" />
+      <module name="cloud-alibaba-sentinel-service" target="1.8" />
       <module name="cloud-commons-api" target="1.8" />
       <module name="cloud-config-center3344" target="1.8" />
       <module name="cloud-config-client" target="1.8" />
