@@ -26,6 +26,7 @@
         <module>cloud-consumer-rabbitmq</module>
         <module>cloud-alibaba-consumer-order80</module>
         <module>cloud-alibaba-provider-payment</module>
+        <module>cloud-alibaba-config-nacos-client</module>
     </modules>
     <packaging>pom</packaging>
 
