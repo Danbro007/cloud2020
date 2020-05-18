@@ -1,0 +1,19 @@
+server:
+  port: 9100
+
+spring:
+  application:
+    name: cloud-alibaba-sentinel-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.0.109:8848 # Nacos 地址和端口
+    sentinel:
+      transport:
+        dashboard: localhost:8080 # 配置 DashBoard 的ip和端口
+        port: 8719 # 默认8719 Sentinel 监控服务的端口 如果被占用会在原来的端口号上加1，直到端口没有被占用
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
