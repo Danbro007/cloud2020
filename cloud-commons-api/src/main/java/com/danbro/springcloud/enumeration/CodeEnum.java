@@ -11,7 +11,9 @@ public enum CodeEnum {
      * 返回代码和消息
      */
     SUCCESS(200, "发送成功"),
-    NOT_FOUND(404, "发送失败");
+    NOT_FOUND(404, "发送失败"),
+    INVOKE_HANDLER1(201,"调用handler1"),
+    INVOKE_HANDLER2(202,"调用handler2");
 
     private String message;
     private int code;

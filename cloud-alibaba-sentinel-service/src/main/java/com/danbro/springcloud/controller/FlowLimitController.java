@@ -52,12 +52,14 @@ public class FlowLimitController {
         return "-----test 异常数-----";
     }
 
-
+    /**
+     * 热点参数限流测试接口
+     */
     @SentinelResource(value = "testKey", blockHandler = "handleTestHotKey")
     @GetMapping("/testHotKey")
     public String testHotKey(@RequestParam(value = "p1", required = false) String p1,
                              @RequestParam(value = "p2", required = false) String p2) {
-        int i = 2 / 0;
+//        int i = 2 / 0; //测试当遇到异常时热点参数限流是否起作用
         return "test HotKey Success!";
     }
 
