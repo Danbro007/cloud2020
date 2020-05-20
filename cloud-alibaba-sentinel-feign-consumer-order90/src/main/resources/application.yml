@@ -1,0 +1,25 @@
+server:
+  port: 90
+
+spring:
+  application:
+    name: sentinel-openfeign-consumer-order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080 # 配置 DashBoard 的ip和端口
+        port: 8719 # 默认8719 Sentinel 监控服务的端口 如果被占用会在原来的端口号上加1，直到端口没有被占用
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+feign:
+  sentinel:
+    enabled: true # 启用sentinel

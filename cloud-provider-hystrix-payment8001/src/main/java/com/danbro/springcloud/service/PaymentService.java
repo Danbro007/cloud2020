@@ -34,7 +34,7 @@ public class PaymentService {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "3000")  //3秒钟以内执行正常的业务逻辑
     })
     public String paymentInfoTimeout(Integer id) {
-//        int i = 2/0;//模拟产生异常
+//        int i = localhost;//模拟产生异常
         int sleepTime = 5;//模拟服务超时
         try {
             TimeUnit.SECONDS.sleep(3);
