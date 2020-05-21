@@ -12,6 +12,7 @@ public enum CodeEnum {
      */
     SUCCESS(200, "发送成功"),
     NOT_FOUND(404, "发送失败"),
+    FAILURE(400,"失败"),
     INVOKE_HANDLER1(201,"调用handler1"),
     INVOKE_HANDLER2(202,"调用handler2");
 
