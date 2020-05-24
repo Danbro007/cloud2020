@@ -1,0 +1,29 @@
+server:
+  port: 2102
+
+spring:
+  application:
+    name: seata-storage-service
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml # 指定yaml 格式的配置
+        namespace: ${nacos.namespace}
+        prefix: seata-client # 指定 Nacos 配置文件的前缀
+      discovery:
+        namespace: ${nacos.namespace}
+  datasource:
+    url: jdbc:mysql://localhost:3306/seat_storage?relaxAutoCommit=true
+
+seata:
+  application-id: ${spring.application.name}
+  tx-service-group: my_test_tx_group
+  config:
+    nacos:
+      namespace: ${nacos.namespace}
+  registry:
+    nacos:
+      namespace: ${nacos.namespace}
+
+nacos:
+  namespace: 8c1d421d-d740-41a7-a56d-36156bcf4edf

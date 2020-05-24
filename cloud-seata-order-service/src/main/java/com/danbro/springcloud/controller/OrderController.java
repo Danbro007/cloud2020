@@ -5,6 +5,8 @@ import com.danbro.springcloud.entities.Order;
 import com.danbro.springcloud.enumeration.CodeEnum;
 import com.danbro.springcloud.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,8 +24,8 @@ public class OrderController {
     OrderService orderService;
 
     @PostMapping("/order")
-    public CommonResult createOrder(@RequestBody Order order){
+    public CommonResult createOrder(@RequestBody Order order) {
         orderService.create(order);
-        return new CommonResult(CodeEnum.SUCCESS,order);
+        return new CommonResult(CodeEnum.SUCCESS, order);
     }
 }

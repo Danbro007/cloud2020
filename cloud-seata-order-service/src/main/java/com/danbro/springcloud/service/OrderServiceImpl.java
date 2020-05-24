@@ -2,8 +2,10 @@ package com.danbro.springcloud.service;
 
 import com.danbro.springcloud.entities.Order;
 import com.danbro.springcloud.mapper.OrderMapper;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 /**
@@ -24,6 +26,7 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private AccountService accountService;
 
+    @GlobalTransactional(name="fsp_order_service",rollbackFor = Exception.class)
     @Override
     public void create(Order order) {
         log.info("--------->开始创建订单<---------");
