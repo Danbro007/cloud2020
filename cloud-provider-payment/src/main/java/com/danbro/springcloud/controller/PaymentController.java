@@ -57,9 +57,22 @@ public class PaymentController {
         return String.valueOf(port);
     }
 
-
+    /**
+     * 测试负载均衡
+     * @return 响应请求的服务器端口
+     */
     @GetMapping("/payment/lb")
     public String paymentLb(){
         return String.valueOf(port);
     }
+
+    /**
+     * 测试 zipkin 链路监控
+     * @return
+     */
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin() {
+        return "hi，i`am payment zipkin server fall back, welcome to cqvie";
+    }
+
 }

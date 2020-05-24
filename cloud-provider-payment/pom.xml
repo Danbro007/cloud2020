@@ -11,6 +11,11 @@
 
     <artifactId>cloud-provider-payment</artifactId>
     <dependencies>
+        <!--包含了 sleuth + zipkin-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
         <!--SpringMVC-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

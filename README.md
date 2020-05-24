@@ -32,3 +32,5 @@
 [Sentinel 官方文档](https://sentinelguard.io/zh-cn/)
 
 [Seata 中文官方文档](http://seata.io/zh-cn/docs/overview/what-is-seata.html)
+
+[Spring Cloud Slueth 官方文档](https://github.com/spring-cloud/spring-cloud-sleuth)

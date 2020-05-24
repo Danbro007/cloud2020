@@ -21,13 +21,19 @@ public class OrderFeignController {
     private PaymentFeignService paymentFeignService;
 
     @GetMapping("/consumer/payment/{id}")
-    public CommonResult<Payment> getPayment(@PathVariable("id") Long id){
+    public CommonResult<Payment> getPayment(@PathVariable("id") Long id) {
         return paymentFeignService.getPaymentById(id);
     }
 
     @GetMapping(value = "/consumer/payment/timeout")
-    public String paymentFeignTimeout(){
+    public String paymentFeignTimeout() {
         return paymentFeignService.paymentTimeout();
     }
 
+
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin() {
+        // openfeign 默认1秒钟超时
+        return paymentFeignService.paymentZipkin();
+    }
 }
